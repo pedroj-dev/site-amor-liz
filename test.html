@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 meses com Liz 💖</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9ecf, #ffc7e3, #ffd9ec);
+      overflow-x:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
+      color:white;
+    }
+
+    /* Fundo */
+    .background{
+      position:fixed;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      overflow:hidden;
+      z-index:-1;
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background: rgba(255,255,255,0.15);
+      animation: flutuar 15s linear infinite;
+    }
+
+    .circle:nth-child(1){
+      width:250px;
+      height:250px;
+      left:10%;
+      top:80%;
+    }
+
+    .circle:nth-child(2){
+      width:180px;
+      height:180px;
+      left:70%;
+      top:85%;
+      animation-duration:18s;
+    }
+
+    .circle:nth-child(3){
+      width:120px;
+      height:120px;
+      left:45%;
+      top:95%;
+      animation-duration:12s;
+    }
+
+    @keyframes flutuar{
+      from{
+        transform:translateY(0) rotate(0deg);
+      }
+
+      to{
+        transform:translateY(-120vh) rotate(360deg);
+      }
+    }
+
+    /* Card */
+    .card{
+      width:100%;
+      max-width:1000px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(14px);
+      border-radius:30px;
+      padding:40px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.25);
+      box-shadow:0 0 35px rgba(255,105,180,0.25);
+    }
+
+    h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#fff0f7;
+      margin-bottom:30px;
+      font-size:1.1rem;
+    }
+
+    /* Fotos */
+    .photo-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:15px;
+      margin-bottom:30px;
+    }
+
+    .photo-grid img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.4s;
+      border:2px solid rgba(255,255,255,0.25);
+    }
+
+    .photo-grid img:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 25px rgba(255,105,180,0.35);
+    }
+
+    /* Botão */
+    button{
+      padding:16px 35px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(45deg,#ff4fa3,#ff85c2);
+      color:white;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 20px rgba(255,105,180,0.6);
+    }
+
+    /* Mensagem */
+    .mensagem{
+      margin-top:35px;
+      background: rgba(255,255,255,0.15);
+      border-radius:25px;
+      padding:30px;
+      line-height:1.8;
+      font-size:1.1rem;
+      color:#fff5fa;
+
+      opacity:0;
+      transform:translateY(20px);
+      transition:1s;
+      pointer-events:none;
+    }
+
+    .mensagem.show{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+    /* Corações */
+    .heart{
+      position:fixed;
+      color:#ff2e88;
+      font-size:20px;
+      animation: subir 4s linear forwards;
+      pointer-events:none;
+    }
+
+    @keyframes subir{
+      from{
+        transform:translateY(0) scale(1);
+        opacity:1;
+      }
+
+      to{
+        transform:translateY(-250px) scale(1.8);
+        opacity:0;
+      }
+    }
+
+    @media(max-width:700px){
+
+      h1{
+        font-size:2rem;
+      }
+
+      .card{
+        padding:25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <div class="card">
+
+    <h1>3 meses com você 💖</h1>
+
+    <p class="subtitle">
+      Obrigado por todos os momentos especiais com você, sua peppa conguita pro max que eu amo! boneca zoiuda
+    </p>
+
+    <div class="photo-grid">
+      <img src="Screenshot_21.png">
+      <img src="Screenshot_62.png">
+      <img src="IMG-20260401-WA0025.jpg">
+      <img src="IMG-20260402-WA0019.jpg">
+      <img src="Screenshot_80.png">
+      <img src="IMG-20260401-WA0048.jpg">
+    </div>
+
+    <button onclick="mostrarMensagem()">
+      💌 Iniciar
+    </button>
+
+    <div class="mensagem" id="mensagem">
+
+      Obrigado por tudo que a gente viveu nesses 3 meses mor, eu amo mt vc! quero ficar com vc por meses e anos, minha boneca. 💖
+      <br><br>
+
+      Conhecer você foi uma das melhores coisas que aconteceram comigo.
+      Cada conversa, cada risada, cada momento, tudo! seja momemntos bons ou ruim, tristes ou felizes, quero passar o tempo com vc, minha vida com vc ao seu lado minha linda.
+      <br><br>
+
+      mor, obg por tudo de verdade e vc me mudou totalmente para um cara melhor, eu amo tanto vc garota que vc nao tem noção, liz martini, quero muito ser aquele que vai coloca uma aliança no seu dedo e aquele que ira casar e sermos feliz, eu amo mt vc 💕
+
+
+      feito por mim ne, seu namorado joao pedro rs
+    </div>
+
+  </div>
+
+  <script>
+
+    function mostrarMensagem(){
+
+      const mensagem = document.getElementById("mensagem");
+
+      mensagem.classList.add("show");
+
+      for(let i = 0; i < 35; i++){
+
+        let heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "💖";
+
+        heart.style.left = Math.random() * window.innerWidth + "px";
+
+        heart.style.top = window.innerHeight + "px";
+
+        heart.style.fontSize = (Math.random() * 25 + 15) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
